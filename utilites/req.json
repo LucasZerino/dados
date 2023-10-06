@@ -1,0 +1,93 @@
+{
+  "comentários": [
+    "EAD - FALTA TOKEN PARA TESTAR api",
+    "SGA PENSAR - PUPPETEER",
+    " SGA WEBCK - PUPPETEER",
+    "POWER CRM - PUPPETEER",
+    "FIELD CONTROL - problema",
+    "SOFTRUCK ROLES Roles ['ADMIN', 'ENTERPRISE', 'REGULAR', 'OWNER', 'VISITOR']"
+  ],
+  "cpanel_email": {
+    "criar": {
+      "method": "POST",
+      "endpoint": "https://bolt360.com.br:2083/cpsess5064924243/execute/Email/add_pop",
+      "Authorization": "cpanel bolt360com:GRBZQMSI3H005PUH4PMBEU6R7CAMVC0S",
+      "body": {
+        "type": "x-www-form-urlencoded",
+        "content": "{email = '', domain = bolt360.com.br, password = '', quota = 250, send_welcome_email = 1 }"
+      }
+    },
+    "deletar": {
+      "method": "POST",
+      "endpoint": "https://bolt360.com.br:2083/cpsess5064924243/execute/Email/delete_pop",
+      "Authorization": "cpanel bolt360com:GRBZQMSI3H005PUH4PMBEU6R7CAMVC0S",
+      "body": {
+        "type": "x-www-form-urlencoded",
+        "content": "{email = '', domain = bolt360.com.br }"
+      }
+    }
+  },
+  "desk": {
+    "method": "POST",
+    "endpoint": "https://desk.bchat.com.br/api/v1/users",
+    "Authorization": "Token hYf1uSe120DP9ctiiQoQW0Zymf-JNn0libi31ZDFib18prKd71Au2sx4M-4fAPcH",
+    "body": {
+      "type": "json",
+      "content": {
+        "firstname": "Jane",
+        "lastname": "Doe",
+        "email": "email@email.com.br",
+        "login": "email@email.com.br",
+        "organization": "Bolt 360 Assessoria",
+        "roles": ["Agent", "Customer", "Admin"]
+      }
+    }
+  },
+  "softruck": {
+    "rota-auth": {
+      "endpoint": "POST https://public-api.softruck.com/api/v1/auth/login",
+      "body": "json {username: '', password: ''}"
+    },
+    "criar": {
+      "method": "POST",
+      "endpoint": "https://api.app.softruck.com/api/v1/users",
+      "Authorization": "rota-auth",
+      "body": {
+        "type": "json",
+        "content": {
+          "name": "cosme teste",
+          "username": "teste.teste",
+          "email": "teste@email.com.br",
+          "cpf": "14485654052",
+          "birthdate": "1990-01-01",
+          "user_type": "ADMIN",
+          "enterprise_id": 424,
+          "phone1": "8498888888",
+          "locale": "pt_BR"
+        }
+      }
+    },
+    "arquivar": {
+      "method": "POST",
+      "endpoint": "https://api.app.softruck.com/api/v1/users/archive",
+      "Authorization": "rota-auth",
+      "body": {
+        "type": "json",
+        "content": { "ids": [420191] }
+      }
+    }
+  },
+  "bchat": {
+    "method": "POST",
+    "endpoint": "https://app.bchat.com.br/api/v1/accounts/1/agents",
+    "Authorization": "Bearer eyJhY2Nlc3MtdG9rZW4iOiJodUhYaS0xbk9uMW1MRmJzOXhaYTFBIiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6InE4SFZoejFmbUxxNXE0bnIxcmlDaFEiLCJleHBpcnkiOiIxNjk5MjgwNjU2IiwidWlkIjoiY29zbWVAZ3J1cG9tYWlzLndvcmsifQ==",
+    "body": {
+      "type": "json",
+      "content": {
+        "name": "cosbel da silva",
+        "email": "cosbel@bolt360.com.br",
+        "role": "agent"
+      }
+    }
+  }
+}

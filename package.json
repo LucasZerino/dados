@@ -1,0 +1,30 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "proxy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon proxy.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "axios": "^1.5.0",
+    "body-parser": "^1.20.2",
+    "cheerio": "^1.0.0-rc.12",
+    "child_process": "^1.0.2",
+    "convertapi": "^1.13.0",
+    "cors": "^2.8.5",
+    "docxtemplater": "^3.39.1",
+    "express": "^4.18.2",
+    "form-data": "^4.0.0",
+    "mammoth": "^1.6.0",
+    "nodemon": "^3.0.1",
+    "officegen": "^0.6.5",
+    "puppeteer": "^21.1.1",
+    "unzipper": "^0.10.14"
+  }
+}
